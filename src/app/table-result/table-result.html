@@ -1,0 +1,24 @@
+@if (outputResults){
+    <h2>Investment Results</h2>
+    <table>
+    <thead>
+        <tr>
+            <th>Year</th>
+            <th>Total Amount Invested</th>
+            <th>Interest Earned</th>
+            <th>End of Year Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let result of outputResults">
+            <td>{{ result.year }}</td>
+            <td>{{ result.totalAmountInvested | currency }}</td>
+            <td>{{ result.interest | currency }}</td>
+            <td>{{ result.valueEndOfYear | currency }}</td>
+        </tr>
+    </tbody>
+</table>
+} @else {
+    <h2>No Investment Data Available</h2>
+}
+
