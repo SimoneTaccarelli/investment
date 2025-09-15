@@ -7,13 +7,6 @@ import { type InputModel } from './input.model';
 export class InputService {
   private userInput: InputModel | null = null;
 
-  setUserInput(input: InputModel) {
-    this.userInput = input;
-  }
-
-  getUserInput(): InputModel | null {
-    return this.userInput;
-  }
 
   calculateInvestmentResults(input: InputModel): any[] {
     const { initialInvestment, yearlyContribution, expectedReturn, duration } = input;

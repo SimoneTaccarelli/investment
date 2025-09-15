@@ -1,6 +1,8 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { InputService } from '../user-input/input.service';
 import { CommonModule } from '@angular/common';
+import { InputModel } from '../user-input/input.model';
+
 
 @Component({
   selector: 'app-table-result',
@@ -9,7 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './table-result.css'
 })
 export class TableResult implements OnChanges {
- @Input() receivedInput: any;
+ @Input() receivedInput!: InputModel ;
 
   outputResults: any[] | null = null;
   constructor(private inputService: InputService) {}
