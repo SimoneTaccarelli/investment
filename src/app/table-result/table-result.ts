@@ -1,12 +1,12 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { InputService } from '../user-input/input.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 import { InputModel } from '../user-input/input.model';
 
 
 @Component({
   selector: 'app-table-result',
-  imports: [CommonModule],
+  imports: [CommonModule, CurrencyPipe],
   templateUrl: './table-result.html',
   styleUrl: './table-result.css'
 })
