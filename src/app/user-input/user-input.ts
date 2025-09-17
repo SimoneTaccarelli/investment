@@ -29,6 +29,12 @@ export class UserInput {
       duration: this.inputUser.duration
     };
     this.inputSubmitted.emit(inputUser);
+    this.inputUser = {
+      initialInvestment: 0,
+      yearlyContribution: 0,
+      expectedReturn: 0,
+      duration: 0
+    };
     console.log(this.inputUser);
   }
 
